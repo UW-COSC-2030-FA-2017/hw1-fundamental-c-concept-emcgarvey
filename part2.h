@@ -6,7 +6,7 @@ class Collection
 {
 private:
 	int size;
-	collection = new T[size];
+	collection = new T[256];
 public:
 	Collection();
 	bool isEmpty() const;
