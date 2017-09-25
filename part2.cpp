@@ -2,15 +2,8 @@
 #include <iostream>
 #include<utility>
 #include<cstdlib>
+#include <stdio.h>
 using namespace std;
-template<class T>
-Collection::Collection()
-{
-	for (int i = 0, i < 256; i++)
-	{
-		collection[i] = NULL;
-	}
-}
 template<class T>
 bool Collection<T>::isEmpty() const
 {

@@ -6,9 +6,14 @@ class Collection
 {
 private:
 	int size;
-	collection = new T[256];
+	T * collection;
 public:
-	Collection();
+	Collection() {collection = new T[256];
+	for (int i = 0; i < 256; i++)
+	{
+		collection[i] = NULL;
+	}
+	}
 	bool isEmpty() const;
 	void makeEmpty();
 	void insert(T x);
