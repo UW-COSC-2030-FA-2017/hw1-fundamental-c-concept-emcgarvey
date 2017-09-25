@@ -5,7 +5,7 @@ template<class T>
 class Collection
 {
 private:
-	int size;
+	int size = 0;
 	T * collection;
 public:
 	Collection() {collection = new T[256];

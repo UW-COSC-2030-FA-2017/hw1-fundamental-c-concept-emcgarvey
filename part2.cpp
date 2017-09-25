@@ -54,37 +54,23 @@ void Collection<T>::remove(T x)
 template<class T>
 void Collection<T>::removeRandom()
 {
-	int tsize = 0;
 	for (int i = 0; i < 256; i++)
 	{
 		if (collection[i] != NULL)
 		{
-			tsize++;
-		}
-	}
-	temp = new T[tsize];
-	for (int i = 0; i < 256; i++)
-	{
-		if (collection[i] != NULL)
-		{
-			collection[i] = temp[i];
-		}
-	}
-	int r = rand() % tsize;
-	for (int i = 0; i < 256; i++)
-	{
-		if (collection[i] == temp[r])
-		{
-			collection[i] = NULL;
-			size--;
-			return;
+			int r = rand() % 2;
+			if (r = 1)
+			{
+				collection[i] = NULL;
+				return;
+			}
 		}
 	}
 }
 template<class T>
 bool Collection<T>::notContained(T x) const
 {
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < 256; i++)
 	{
 		if (collection[i] == x)
 		{
